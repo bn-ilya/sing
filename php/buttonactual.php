@@ -18,7 +18,7 @@
 	<?php 
 			if(isset($_SESSION['boolLog'], $_SESSION['boolPass'])) {
 				if ($_SESSION['boolLog'] == true && $_SESSION['boolPass'] == true) { ?>
-					<form action="index.php" name="actualTransf<?= $str['id'] ?>">
+					<form action="" name="actualTransf<?= $str['id'] ?>">
 						<input type="submit" class="add__actual" value="X" name="<?= $str['id'] ?>" onclick="getButton(this)">
 						 <input type="hidden" name="idActual" value="<?= $str['id'] ?>">
 					</form>
