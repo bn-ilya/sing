@@ -1,5 +1,5 @@
 <?php 	
-	$sql = new mysqli('localhost', 'root', 'robokop67', 'song');
+	include "php/dbconn.php";
 	$input = $_POST['getName'];
 	$checkInput = $sql->query("SELECT `num` FROM `actual` WHERE `num` = '$input'"); 
 	$row = $checkInput->fetch_assoc();

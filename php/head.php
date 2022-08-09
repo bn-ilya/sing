@@ -16,7 +16,7 @@
 	<meta property="og:description" content="Поём сегодня">
     <meta property="og:image" content="img/iconsSVG/prewfour.jpg">
 <?php
- 	$sql = new mysqli('localhost', 'root', 'robokop67', 'song');
+ 	include "php/dbconn.php"
  ?>
 
 </head>

@@ -6,7 +6,7 @@
 
 	
 		if (isset($_POST['edittext'])) {
-		$sql = new mysqli('localhost', 'root', '', 'song');
+		include "php/dbconn.php";
 		$changeText = $_POST['edittext'];	
 		$changeName = $_POST['editname'];
 		$changeAuthor = $_POST['editauthor'];
