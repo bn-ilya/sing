@@ -1,0 +1,263 @@
+@media only screen and (max-width : 768px) {
+	
+	/*Меню -------- */
+
+.menu {
+	height: 70px;
+}
+
+.menu_home {
+	width: 22px;
+	height: 22px;
+}
+
+.menu_logo {
+	font-size: 10px;
+	padding-left: 14px;
+}
+
+.song_logo {
+	color: #8fa282;
+}
+
+}
+
+@media only screen and (max-width : 480px) {
+
+
+
+/*Меню -------- */
+
+.menu {
+	height: 60px;
+}
+
+.menu_home {
+	width: 22px;
+	height: 22px;
+}
+
+.menu_logo {
+	font-size: 10px;
+}
+
+.song_logo {
+	color: #8fa282;
+}
+
+
+/*НАЧАЛО ГЛАВНОЙ СТРАНИЦЫ*/
+
+	.block__margin {
+		margin: 0 0 0 30px;
+	}
+
+	.block__actual {
+		margin-bottom: 0px;
+	}
+
+	.block__hide {
+		display: none;
+	}
+
+	.song_column {
+		
+	}
+
+	.song_num {
+		font-size: 12px;
+	
+	}
+
+	.song_name {
+		font-size: 14px;
+	}
+
+	.song_author {
+
+	}
+
+/*КОНЕЦ ГЛАВНОЙ СТРАНИЦЫ*/
+
+
+/*Названия песен в страницах*/ 
+
+
+.namesong_name {
+	font-size: 30px;
+}
+
+.namesong_author {
+
+}
+
+/*Тональности*/ 
+
+
+/*Кнопка play*/
+
+/*Ползунок времени*/
+
+/*Таймер времени*/
+
+/*Кнопка звука*/
+
+/*Ползунок времени*/
+
+/*Ползунок аудио*/
+
+
+
+/*Строки песен*/ 
+
+
+.info {
+	font-size: 12px;
+}
+
+.chords {
+	font-size: 14px; 
+} 
+
+.text_song {
+	
+}
+
+	
+}
+
+@media only screen and (max-width : 350px) {
+	/*Прибраться тут*/
+
+	.hello__title {
+		font-size: 15px;
+	}
+
+	/*какую-то дичь натворил*/
+
+	.header__list {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		-ms-grid-rows: 120px 120px 120px 120px 120px;
+		grid-template-rows: 120px 120px 120px 120px 120px;
+		                            grid-template-areas: "linkOne" 
+								"linkTwo" 
+								"linkThree" 
+								"linkFour" 
+								"linkFive"
+	}
+
+	.linkOne {
+		margin: 0 0 0 0;
+	}
+
+	.linkTwo {
+		margin: 0 0 0 0;
+	}
+
+	.linkThree {
+		margin: 0 0 0 0;
+	}
+
+	.linkFour {
+		margin: 0 0 0 0;
+	}
+
+	.linkFive {
+		margin: 0 0 0 0;
+	}
+}
+
+@media only screen and (max-width : 320px) {
+
+	/*Меню -------- */
+
+.menu {
+	height: 60px;
+}
+
+.menu_home {
+	
+}
+
+.menu_logo {
+	
+}
+
+.song_logo {
+	color: #8fa282;
+}
+
+
+/*НАЧАЛО ГЛАВНОЙ СТРАНИЦЫ*/
+
+	.block__margin {
+		margin: 0 0 0 23px;
+	}
+	
+	.song_num {
+		font-size: 12px;
+	}
+
+	.song_name {
+		font-size: 13px;
+	}
+
+	.song_author {
+
+	}
+
+/*КОНЕЦ ГЛАВНОЙ СТРАНИЦЫ*/
+
+
+/*Названия песен в страницах*/ 
+
+.namesong_name {
+	font-family: 'TTNorms-Medium';
+	font-weight: medium;
+	font-size: 26px;
+	margin: 0 0 10px 0;
+}
+
+.namesong_author {
+
+}
+
+/*Тональности*/ 
+
+
+/*Кнопка play*/
+
+/*Ползунок времени*/
+
+/*Таймер времени*/
+
+/*Кнопка звука*/
+
+/*Ползунок времени*/
+
+/*Ползунок аудио*/
+
+
+
+/*Строки песен*/ 
+
+
+.info {
+	font-size: 12px;
+}
+
+.chords {
+	font-size: 14px; 
+} 
+
+.text_song {
+	
+}
+
+.hat__title_change {
+	font-size: 15px;
+	color: black;
+}
+
+}
