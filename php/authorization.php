@@ -7,8 +7,8 @@
 	$getLogin = $_POST['login'];
 	$getPassword = $_POST['password'];
 
-	$formLogin = "dudar";
-	$formPassword = "itproger";
+	$formLogin = "max";
+	$formPassword = "perdun";
 
 	$_SESSION['boolLog'] = false;
 	$_SESSION['boolPass'] = false;

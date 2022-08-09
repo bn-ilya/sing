@@ -61,11 +61,11 @@
 								<div class="hello__intro">
 									<div class="hello__column">	
 									<div class="hello__block block__one">	
-											<div class="hello__title">Сборник для тебя</div>
+											<div class="hello__title">Сборник христианских песен</div>
 									</div>
 
 									<div class="hello__block block__two">
-											<div class="hello__subtitle">Аккорды, текста, аудио, много простых, но удобных вещей. Поклонимся Творцу!</div>
+											<div class="hello__subtitle">Аккорды, текста, аудио, много простых, но удобных вещей.</div>
 									</div>
 									</div>
 								</div>
