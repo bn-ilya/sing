@@ -104,11 +104,12 @@
 			<input type="button" name="myButton" value="A" onclick="forButton(this)" class="up_chords">
 			<input type="button" name="myButton" value="A#" onclick="forButton(this)" class="up_chords"> 
 			<input type="button" name="myButton" value="H" onclick="forButton(this)" class="up_chords">	
+			<input type="button" name="myButton" value="B" onclick="forButton(this)" class="up_chords">
 		</section>
 	</div>
 
 	<div class="block_show_chords">
-				<input type="button" name="hideChords" value="Скрыть аккорды" onclick="hideChords(this)" class="show_chords">
+				<input type="button" name="hideChords" value="Показать аккорды" onclick="hideChords(this)" class="show_chords">
 				<div class="fonts_change">
 				<input type="button" name="FontsUp" value="" onclick="fontChange(this)" class="fonts_up">
 				<input type="button" name="FontsDown" value="" onclick="fontChange(this)" class="fonts_down">
@@ -175,7 +176,7 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 	foreach ($keywords as $key => $value) {
 		
 		if (thisIsChords($value) == true) { ?>
-			<p id="cords_<?=$key?>" class="chords"> <?=$value?> </p>
+			<p id="cords_<?=$key?>" class="chords hide"> <?=$value?> </p>
 		<?php
 
 		} else if (thisIsInfo($value)) { ?>
@@ -243,7 +244,7 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
     	}
 
 
-    	let showChords = true;
+    	let showChords = false;
 
     	function hideChords(button) {
     		if (showChords == true) {
@@ -278,9 +279,10 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 
     	function forButton(button){
     		var tone = getTone();
+			console.log(tone)
     		while(tone != button.value) {
     			for(let i = 0; i<100; i++){
-    	   		//console.log(i);
+
 	    	   	var div = document.getElementById("cords_" + i); 
 				if(div != null){
 					div.innerHTML = div.innerHTML.replace(/C#/g,"ПростоРе");
@@ -295,9 +297,9 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 					div.innerHTML = div.innerHTML.replace(/F/g,"ФаДиез");			
 					div.innerHTML = div.innerHTML.replace(/G/g,"СольДиез");			
 					div.innerHTML = div.innerHTML.replace(/A/g,"ЛяДиез");
-					div.innerHTML = div.innerHTML.replace(/H/g,"ПростоДо");			
+					div.innerHTML = div.innerHTML.replace(/H/g,"ПростоДо");	
+					div.innerHTML = div.innerHTML.replace(/B/g,"СиБимоль");		
 					
-
 					div.innerHTML = div.innerHTML.replace(/ДоДиез/g,"C#");
 					div.innerHTML = div.innerHTML.replace(/РеДиез/g,"D#");
 					div.innerHTML = div.innerHTML.replace(/ФаДиез/g,"F#");
@@ -310,7 +312,8 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 					div.innerHTML = div.innerHTML.replace(/ПростоФа/g,"F");
 					div.innerHTML = div.innerHTML.replace(/ПростоСоль/g,"G");
 					div.innerHTML = div.innerHTML.replace(/ПростоЛя/g,"A");
-					div.innerHTML = div.innerHTML.replace(/ПростоСи/g,"H");  
+					div.innerHTML = div.innerHTML.replace(/ПростоСи/g,"H");
+					div.innerHTML = div.innerHTML.replace(/СиБимоль/g,"H");	
 					tone = getTone();
 					}
 				}  	
@@ -320,7 +323,7 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 
 		function getTone() {
 				for(let i = 0; i<100; i++){
-	    	   		//console.log(i);
+
 		    	   	var div = document.getElementById("cords_" + i); 
 					if(div != null){
 						let strokeChords = div.innerText;
@@ -331,9 +334,11 @@ $data = $sql->query("SELECT `name`, `id`, `author`, `text` FROM `song attributes
 						                    strokeChords.indexOf("F"), //-1
 						                    strokeChords.indexOf("G"), //32
 						                    strokeChords.indexOf("A"), //-1
-						                    strokeChords.indexOf("H")  //44                
+						                    strokeChords.indexOf("H"), //44
+											strokeChords.indexOf("B")                
 						                   );
-
+						
+							   
 						for (let i = 0; i < arr.length; i++){
 
 						   if (arr[i]>=0 && arr[i] < minimumPosition){
